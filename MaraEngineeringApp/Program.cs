@@ -1,7 +1,19 @@
+using DataAccessLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
+using DataAccessLayer;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddDbContext<MaraContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sqlconnection"));
+});
+
+builder.Services.AddDataAccessLayerServices();
 
 var app = builder.Build();
 
