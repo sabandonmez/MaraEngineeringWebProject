@@ -1,7 +1,7 @@
 using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using DataAccessLayer;
-
+using BusinessLayer;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,6 +14,7 @@ builder.Services.AddDbContext<MaraContext>(options =>
 });
 
 builder.Services.AddDataAccessLayerServices();
+builder.Services.AddBusinessLayerServices();
 
 var app = builder.Build();
 

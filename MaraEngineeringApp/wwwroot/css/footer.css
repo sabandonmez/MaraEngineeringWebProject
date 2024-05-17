@@ -1,0 +1,93 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum yüksekliði %100 viewport yüksekliði yapýyoruz */
+}
+
+.content {
+    flex: 1; /* Ýçerik alanýnýn kalan alaný kaplamasýný saðlar */
+}
+
+.footer {
+    font-size: 82.5%;
+    padding: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/footer-bcg.jpg'); /* Lokal dosya yolunuza dikkat edin */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Resmin tekrar etmemesi için */
+    margin-bottom: 0;
+    color: #fff !important;
+    text-align: center;
+}
+
+    .footer a {
+        color: #fff !important; /* Renk beyaz yapýlýyor */
+        text-decoration: none !important; /* Alt çizgi kaldýrýlýyor */
+    }
+
+.footer-telif {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    font-size: 1.5rem;
+    text-align: right; /* Linklerin saða yaslanmasý için */
+    width: 50%; /* Her kolon için geniþlik */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Ýki ana kolonu ayýrmak için */
+}
+
+.footer-column, .footer-telif-column {
+    width: 50%; /* Her kolon için geniþlik */
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+}
+
+.links-column {
+    text-align: right; /* Linklerin saða yaslanmasý için */
+    width: 50%; /* Her kolon için geniþlik */
+}
+
+.cizgi-footer {
+    border: 0;
+    height: 1rem;
+    background: #fff !important;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Footer'ýn tüm alaný kaplamasý için */
+}
+
+/* Ekran geniþliði 768 piksel veya daha küçük olduðunda geçerli olacak stiller */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Kolonlarý alt alta yerleþtir */
+        text-align: center; /* Metin hizalamasýný ortala */
+    }
+
+    .footer-column, .footer-telif-column, .links-column, .social-icons {
+        width: 100%; /* Kolon geniþliðini %100 yap */
+        text-align: center; /* Metin hizalamasýný ortala */
+        margin-bottom: 1rem; /* Kolonlar arasýna boþluk ekle */
+    }
+
+    .footer {
+        padding: 2rem; /* Padding'i küçült */
+    }
+}

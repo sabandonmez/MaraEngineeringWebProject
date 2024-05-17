@@ -10,15 +10,15 @@ namespace DataAccessLayer.Concrete.EntityFramework
     public class RepositoryManager : IRepositoryManager
     {
         private readonly MaraContext _context;
-        private readonly CompanyRepository _companyRepository;
-        private readonly ContactRepository _contactRepository;
-        private readonly InstitutionalRepository _institutionalRepository;
-        private readonly ReferenceRepository _referenceRepository;
-        private readonly ServiceAreaRepository _serviceAreaRepository;
-        private readonly TeamRepository _teamRepository;
-        private readonly UserRepository _userRepository;
+        private readonly ICompanyRepository _companyRepository;
+        private readonly IContactRepository _contactRepository;
+        private readonly IInstitutionalRepository _institutionalRepository;
+        private readonly IReferenceRepository _referenceRepository;
+        private readonly IServiceAreaRepository _serviceAreaRepository;
+        private readonly ITeamRepository _teamRepository;
+        private readonly IUserRepository _userRepository;
 
-        public RepositoryManager(MaraContext context, CompanyRepository companyRepository, ContactRepository contactRepository, InstitutionalRepository institutionalRepository, ReferenceRepository referenceRepository, ServiceAreaRepository serviceAreaRepository, TeamRepository teamRepository, UserRepository userRepository)
+        public RepositoryManager(MaraContext context, ICompanyRepository companyRepository, IContactRepository contactRepository, IInstitutionalRepository institutionalRepository, IReferenceRepository referenceRepository, IServiceAreaRepository serviceAreaRepository, ITeamRepository teamRepository, IUserRepository userRepository)
         {
             _context = context;
             _companyRepository = companyRepository;
