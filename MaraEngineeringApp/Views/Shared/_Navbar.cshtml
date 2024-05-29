@@ -1,19 +1,58 @@
-﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-    <div class="container-fluid">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MaraEngineeringApp</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </li>
-            </ul>
-        </div>
+﻿<link rel="stylesheet" href="~/css/nav-section.css" asp-append-version="true" />
+<div class="prague-header" id="header">
+    <p href="/" class="logo">MARA</p>
+    <div class="bx bx-menu" id="menu-icon" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
     </div>
-</nav>
+    <ul class="navbar" id="navbar">
+        <li><a href="/">Anasayfa</a></li>
+        <li><a  asp-action="OurProjects" asp-controller="OurProjects">Projelerimiz</a></li>
+        <li><a asp-controller="AboutUs" asp-action="Index">Hakkımızda</a></li>
+        <li><a asp-controller="ContactUs" asp-action="Index" >İletişim</a></li>
+    </ul>
+</div>
+
+
+<script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.style.display === "block") {
+            navbar.style.display = "none";
+            navbar.style.position = ""; // position'ı temizle
+        } else {
+            navbar.style.display = "block";
+            navbar.style.position = "inherit"; // position'ı inherit olarak ayarla
+        }
+    }
+
+    window.addEventListener('resize', function () {
+        var navbar = document.getElementById("navbar");
+        if (window.innerWidth > 768) {
+            navbar.style.display = "flex"; // Flex layout for larger screens
+            navbar.style.position = ""; // position'ı temizle
+        } else {
+            navbar.style.display = "none"; // Hide navbar for smaller screens
+            navbar.style.position = ""; // position'ı temizle
+        }
+    });
+
+    window.addEventListener('load', function () {
+        var navbar = document.getElementById("navbar");
+        if (window.innerWidth > 768) {
+            navbar.style.display = "flex"; // Flex layout for larger screens
+            navbar.style.position = ""; // position'ı temizle
+        } else {
+            navbar.style.display = "none"; // Hide navbar for smaller screens
+            navbar.style.position = ""; // position'ı temizle
+        }
+    });
+
+    window.addEventListener('scroll', function () {
+        var header = document.getElementById("header");
+        if (window.scrollY > 0) {
+            header.style.backgroundColor = "rgba(0, 0, 0, 0.8)"; // Yarı saydam siyah
+        } else {
+            header.style.backgroundColor = "transparent"; // Transparan
+        }
+    });
+</script>

@@ -1,0 +1,313 @@
+/* Resim ve baþlýk kýsmý */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Tüm ekran yüksekliðini kaplasýn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* Altýnda boþluk olmasýn */
+}
+
+    .home img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .home::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+    }
+
+.about-us-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+}
+
+.about-us-title h1 {
+    font-size: 4rem;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hakkýmýzda kýsmý */
+.about {
+    padding: 100px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+    .about h2 {
+        font-size: 3rem !important;
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+
+
+/* Kart yapýsý */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:5rem;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive kartlar */
+@media (min-width: 992px) {
+    .card {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+}
+
+.contact-section {
+    padding: 60px 0;
+}
+
+    .contact-section h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #f1f1f1;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+    .btn-submit:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+
+
+
+    /****/
+
+
+
+.contact-section {
+    padding: 60px 0;
+}
+
+    .contact-section h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+.contact-form {
+    max-width: 600px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #f1f1f1;
+}
+
+.btn-submit {
+    background-color: black;
+    border-color: black;
+    color: white;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+    .btn-submit:hover {
+        background-color: white;
+        border-color: black;
+        color:black;
+    }
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:10rem;
+    margin-left:10rem;
+    margin-right:10rem;
+}
+
+.contact-details, .contact-form {
+    flex: 1;
+    margin: 10px;
+    max-width:100vh;
+}
+
+.contact-details {
+    max-width: 400px;
+}
+
+    .contact-details h3 {
+        margin-bottom: 20px;
+    }
+
+    .contact-details p {
+        margin-bottom: 10px;
+    }
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-details, .contact-form {
+        max-width: 100%;
+        margin: 10px 0;
+
+    }
+}

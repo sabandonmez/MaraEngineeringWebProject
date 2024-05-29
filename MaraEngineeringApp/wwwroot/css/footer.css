@@ -1,3 +1,4 @@
+
 html, body {
     height: 100%;
     margin: 0;
@@ -5,15 +6,15 @@ html, body {
     box-sizing: border-box;
 }
 
-#main-container {
+/*#main-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Minimum yüksekliði %100 viewport yüksekliði yapýyoruz */
-}
+    min-height: 100vh;*/ /* Minimum yüksekliði %100 viewport yüksekliði yapýyoruz */
+/*}*/
 
-.content {
-    flex: 1; /* Ýçerik alanýnýn kalan alaný kaplamasýný saðlar */
-}
+/*.content {
+    flex: 1;*/ /* Ýçerik alanýnýn kalan alaný kaplamasýný saðlar */
+/*}*/
 
 .footer {
     font-size: 82.5%;
@@ -25,6 +26,7 @@ html, body {
     margin-bottom: 0;
     color: #fff !important;
     text-align: center;
+    width:100%;
 }
 
     .footer a {
@@ -38,23 +40,47 @@ html, body {
     align-items: center;
 }
 
+
 .social-icons {
-    font-size: 1.5rem;
-    text-align: right; /* Linklerin saða yaslanmasý için */
-    width: 50%; /* Her kolon için geniþlik */
+    font-size: 11px;
+    text-align: right;
+    width: 50%;
+    gap:1rem;
+    display: flex;
+    justify-content: flex-end; /* Sað tarafa yasla */
 }
+
+.social-icons-space {
+    border: 1px solid white;
+    padding: 0.6rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animasyon ekleniyor */
+}
+
+    .social-icons-space:hover {
+        background-color: white;
+        color: black !important;
+    }
+
 
 .container {
     display: flex;
     justify-content: space-between; /* Ýki ana kolonu ayýrmak için */
 }
 
-.footer-column, .footer-telif-column {
+.footer-column{
     width: 50%; /* Her kolon için geniþlik */
     display: flex;
     align-items: center;
     color: #fff !important;
 }
+
+.footer-telif-column {
+    width: 50%; /* Her kolon için geniþlik */
+    align-items: center;
+    color: #fff !important;
+}
+
 
 .links-column {
     text-align: right; /* Linklerin saða yaslanmasý için */
@@ -90,4 +116,27 @@ html, body {
     .footer {
         padding: 2rem; /* Padding'i küçült */
     }
+
+    .social-icons {
+        justify-content: center; /* Ýkonlarý ortala */
+    }
+}
+
+@media (max-width: 174px) {
+    .footer-column p,
+    .links-column h5,
+    .links-column ul,
+    .links-column p {
+        word-wrap: break-word; /* Kelime kýrýlmasýný saðla */
+        word-break: break-all; /* Kelimeleri harf harf kýr */
+    }
+
+        .footer-column p span,
+        .links-column h5 span,
+        .links-column ul span,
+        .links-column p span {
+            display: inline-block;
+            line-height: 1.5; /* Harfler arasýndaki dikey boþluk */
+        }
+
 }

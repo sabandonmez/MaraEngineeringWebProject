@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mara Mühendislik</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/pages-section.css" />
+</head>
+<body>
+
+    <section class="section-1" id="home">
+        <div class="home">
+            <img src="~/img/photo-2.jpg" alt="Home Image">
+            <div class="about-us-title">
+                <h1>Projelerimiz</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>Tamamladığımız Projeler</h2>
+     
+        <div class="card-container">
+            <div class="card">
+                <img src="~/img/yildiz-teknik.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Yıldız Teknik Üniversitesi Millet Bahçesi</h5>
+                    <p class="card-text">
+                        Bu elektrik projesi, toplam 141.920 m² alana sahip olup, projeye dahil olan bahçe alanı ile öne çıkmaktadır.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/img/kadir-acikel.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Kadir Açıkel</h5>
+                    <p class="card-text">1370 m² büyüklüğündeki bu konut projesi, mekanik ve elektrik tesisat çözümleri ile modern yaşam standartlarını karşılayacak şekilde tasarlanmıştır.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/img/hala-bursa.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hala Bursa İnşaat</h5>
+                    <p class="card-text">3000 m² alana sahip bu villa için hazırlanan mekanik ve elektrik tesisat projesi, lüks ve konforlu bir yaşam alanı sunmak üzere özenle tasarlanmıştır.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const title = document.querySelector('.about-us-title h1');
+            title.style.opacity = '1';
+            title.style.animation = 'slideDown 0.5s ease-out forwards';
+        });
+    </script>
+</body>
+</html>

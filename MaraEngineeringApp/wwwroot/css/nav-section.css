@@ -1,0 +1,174 @@
+:root {
+    --bg-color: #fff;
+    --text-color: white;
+    --second-color: #5a7184;
+    --main-color: #6e54fa;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.prague-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 10px 30px;
+    transition: background-color 0.4s ease;  Geçiþ efekti için düzenlendi 
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+    text-decoration: none;
+    margin-bottom: 0px !important;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    padding: 0px !important;
+    margin: 0px !important;
+    left:0;
+    transition: ease .40s;
+}
+
+    .navbar li {
+        margin: 0 0px;
+    }
+
+    .navbar a {
+        color: var(--text-color);
+        font-size: var(--p-font);
+        font-weight: 400;
+        padding: 0px 22px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: ease .40s;
+    }
+
+        .navbar a:hover {
+            box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+            border-radius: 4px;
+        }
+
+#menu-icon {
+    color: var(--text-color);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    border: 1px solid white;
+    padding: 5px 11px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 100px;
+    right: 250px;
+    text-align: right;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .carousel-caption h4, .carousel-caption p {
+        color: white;
+        margin: 0;
+    }
+
+.home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.baslik-aciklama {
+    font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+    .carousel-caption {
+        bottom: 50px;
+        right: 20px;
+        text-align: right;
+        width: auto;
+        padding: 10px;
+        border-radius: 5px;
+        display: block;
+    }
+
+        .carousel-caption h4, .carousel-caption p {
+            color: white;
+            margin: 0;
+        }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8) !important;  Yarý saydam siyah arka plan 
+        position: absolute;
+        top: 60px;  Menu icon height + padding 
+        left: 0;
+    }
+
+        .navbar li {
+            width: 100%;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .navbar a {
+            color: white !important;  Beyaz yazý 
+            text-decoration: none;
+        }
+
+            .navbar a:hover {
+                color: white !important;  Renk deðiþtirmesin 
+                box-shadow: 0 0 10px white;  Çerçevede belirginlik 
+            }
+
+    #menu-icon {
+        display: block;
+    }
+}
+
+
+
